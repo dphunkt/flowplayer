@@ -1,0 +1,32 @@
+<project name="Flowplayer deeptags" default="deploy">
+    <property file="build.generated.properties"/>
+
+	<property file="${user.home}/plugin.properties" />
+	<property file="build.properties" />
+	<property file="${devkit-dir}/plugin-build.properties" />
+	
+	<property name="flowplayer_lib" value="${devkit-dir}/flowplayer.swc" />
+	<property name="extra-sources" value="../../../flowplayer.core/lib/corelib/src ../controls/trunk/src/actionscript ../common/trunk/src/actionscript" />
+	<property name="plugin-libs" value="lib/as3crypto-1_3_patched.swc" />
+    <property name="library-path" value="../controls/trunk/src/flash/madthumbs" />
+
+	<import file="${devkit-dir}/plugin-build.xml"/>
+
+	<property name="basename" value="flowplayer.deeptags" />
+    <property name="releasedir" value="${basename}" />
+	<property name="plugin-binary" value="${basename}.swf" />
+	<property name="plugin-binary-versioned" value="${basename}-${version}.swf" />
+	<property name="plugin-main-class" value="org/flowplayer/deeptags/DeepTags_admin.as" />
+    <property name="compiler-define" value="CONFIG::skin,'true' -define=CONFIG::hasSlowMotion,'false' -keep-as3-metadata=Value,External" />	
+
+	<target name="release" description="makes a release" depends="build">
+		<copyrelease targetdir="flowplayer.deeptags">
+			<releasefiles>
+				<fileset dir="${build-dir}">
+				    <include name="${plugin-binary-versioned}"/>
+				</fileset>
+			</releasefiles>
+		</copyrelease>
+	</target>
+
+</project>
