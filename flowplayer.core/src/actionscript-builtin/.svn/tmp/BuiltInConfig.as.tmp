@@ -1,0 +1,147 @@
+<<<<<<< .mine
+package {
+    import org.flowplayer.controls.Controls;
+    import org.flowplayer.pseudostreaming.PseudoStreamProvider;
+    //import org.flowplayer.analytics.GoogleTracker;    
+    public class BuiltInConfig {
+        private var controls:Controls;
+        private var pseudo:PseudoStreamProvider;
+        //private var gatracker:GoogleTracker;
+        public static const config:Object = {
+            key: '#@98a2d46b3a7e4f3d9aa',
+			contextMenu: [
+				'www.madthumbs.com',
+				'-',
+				'Free Porn Tube - MadThumbs™'
+			],
+//			contextMenu: [
+//				'www.bigtits.com',
+//				'-',
+//				'( . Y . ) – Big Tits™'
+//			],
+			logo: null,
+            play: {
+                width: 40,
+                height: 40,
+                opacity: 1,               
+                label: null,               
+                replayLabel:'Play again?',                
+                progressIndicator: null                
+            },
+            canvas:  {                
+                background: '#000000',                
+                backgroundGradient: 'none'                
+            },          
+            clip:  {
+                autoPlay: true,
+                autoBuffering: true,
+                bufferLength: 2,
+                scaling: 'fit',
+                seekableOnBegin: true,
+                provider: 'pseudo'             
+            },
+			screen:{
+				width: 640, 
+				height: 480,
+				top:0
+			},
+            plugins:{
+//                gatracker: {
+//                  url: 'org.flowplayer.analytics.GoogleTracker',
+//				  googleId: 'UA-2551200-33' //MT
+//                },
+                controls:{
+                    url: 'org.flowplayer.controls.Controls',
+					backgroundColor: '#000000',
+					backgroundGradient: 'low',
+					bufferColor: '#666666',
+					bufferGradient: 'none',
+					bufferAlpha: 1,
+					buttonColor: 'rgba(238,238,238,.6)',
+					buttonLineColor: 'rgba(34,34,34,1)',
+					buttonOverColor: 'rgba(255,153,0,.6)',                  
+					borderRadius: 0,
+					timeColor: '#FF9900',
+					timeBgColor: '#000000',
+					timeBgHeightRatio: 0.825,
+					timeSeparator: ' |',
+					timeBorder: '1px solid rgba(34,34,34,1)',
+					timeBorderRadius : 3,
+					durationColor: '#cccccc',                
+					scrubberHeightRatio: 0.6,
+					scrubberBorderRadius: 3,                 
+					scrubberBarHeightRatio: 0.5,                                    
+					volumeSliderHeightRatio: 0.5,                   
+					volumeBarHeightRatio: 0.375,
+					volumeBorderRadius: 3,
+					volumeSliderColor: '#666666',
+					volumeColor: 'rgba(255,153,0,1)',
+					volumeSliderGradient: 'medium',
+					volumeSliderBorder: '1px solid rgba(34,34,34,1)',
+					sliderColor: '#000000',
+					sliderGradient: 'none',
+					sliderBorder: '1px solid rgba(34,34,34,1)',
+					progressColor: 'rgba(255,153,0,1)',
+					progressGradient: 'low',
+					tooltipColor: '#FF9900',                 
+					tooltipTextColor:'#000000',
+					zIndex: 4,
+//					tooltips: {
+//						scrubber: true
+//					},
+					autoHide: {
+						enabled: false
+					},
+					spacing: { 
+						all: 0
+					},
+					margins: [0, 0, 0, 0]
+                },
+                pseudo: { 
+                    url: 'org.flowplayer.pseudostreaming.PseudoStreamProvider'
+                    //rangeRequests: true
+                    //queryString: escape('&ec_seek=${start}')
+                },
+				pseudoInstream: { 
+					url: 'org.flowplayer.pseudostreaming.PseudoStreamProvider'
+				}
+            }
+        };
+    }
+=======
+package  {
+//import org.flowplayer.rtmp.RTMPStreamProvider;
+//import org.flowplayer.controls.Controls;
+//    import org.flowplayer.shareembed.ShareEmbed;
+//    import org.flowplayer.pseudostreaming.PseudoStreaming;
+    
+public class BuiltInConfig {
+//    private var rtmp:org.flowplayer.rtmp.RTMPStreamProvider;
+//    private var controls:org.flowplayer.controls.Controls;
+//    private var share:org.flowplayer.shareembed.ShareEmbed;
+//    private var pseudo:org.flowplayer.pseudostreaming.PseudoStreamProvider;
+
+//    [Embed(source="../assets/play.png")]
+//    public var PlayButton:Class;
+//
+//    [Embed(source="../assets/play.png")]
+//    public var Logo:Class;
+
+    public static const config:Object = { 
+       "plugins": {
+//        "pseudo": {
+//              "url": 'org.flowplayer.pseudostreaming.PseudoStreamProvider'
+//        },
+//        "rtmp": {
+//            "url": 'org.flowplayer.rtmp.RTMPStreamProvider'
+//        },
+//        "controls": {
+//            "url": 'org.flowplayer.controls.Controls'
+//		}
+//           viral: {
+//               url: 'org.flowplayer.shareembed.ShareEmbed'
+           }
+       }
+    }; 
+>>>>>>> .r808
+}
